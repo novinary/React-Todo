@@ -1,7 +1,10 @@
 import React from 'react';
 
 function Todo(props){
-    return<div>{props.item.task}</div>
+    return<div className={props.id}>
+    <input type="checkbox" />
+    {props.task}
+    </div>
 }
 
 export default Todo;
