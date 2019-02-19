@@ -4,6 +4,7 @@ function TodoForm(props) {
     return(
     <form onSubmit={props.newTodo}>
     <input
+        className="input"
         value={props.todoItem}
         type="text"
         name="todoItem"

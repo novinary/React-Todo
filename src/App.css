@@ -1,0 +1,11 @@
+.completed {
+	color: green;
+}
+
+.todoApp {
+	width: 400px;
+	margin: 50px auto;
+	border: 1px solid black;
+	border-radius: 4px;
+	padding: 10px;
+}

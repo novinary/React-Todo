@@ -1,6 +1,7 @@
 import React from 'react';
 import TodoList from './components/TodoComponents/TodoList';
 import TodoForm from './components/TodoComponents/TodoForm';
+import './App.css';
 
 //todo array of objects
 const taskList = [
@@ -65,8 +66,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <h2>This is my Todo App!</h2>
+        <div className="todoApp">
+         <h2>This is my Todo App!</h2>
         <TodoForm
                 handleChanges={this.handleChanges}
                 handleClear={this.handleClear}
@@ -78,8 +79,5 @@ class App extends React.Component {
     );
   }
 }
-
-
-
 
 export default App;
