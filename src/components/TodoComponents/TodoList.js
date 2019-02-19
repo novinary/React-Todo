@@ -6,11 +6,16 @@ import Todo from './Todo';
 function TodoList(props) {
     return (
         <div>
-            {props.todoList.map(todo => {
-                return <Todo item={todo} key={todo.id} />;
-            })}
-        </div>
-    );
-}
-
-export default TodoList;
+                {props.todoList.map(todo => {
+                    return ( <Todo task={todo.task}
+                      key={todo.id}
+                      id={todo.id}
+                      completed={todo.completed}
+                      />
+                      );
+                    })}
+                </div>
+            );
+        }
+        
+        export default TodoList;
