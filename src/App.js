@@ -34,7 +34,12 @@ class App extends React.Component {
       id: ''
     };
   }
-  
+
+  handleChanges = e => {
+    this.setState({ [e.taret.name]: e.target.value });
+  };
+
+
   render() {
     return (
       <div>
