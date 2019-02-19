@@ -10,7 +10,7 @@ function TodoForm(props) {
         placeholder="Todo" 
         onChange={props.handleChanges}
     />   
-    <button type="submit">Submit</button>
+    <button type="submit">Add Todo</button>
     </form>
     );
 }

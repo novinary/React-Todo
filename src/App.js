@@ -44,7 +44,9 @@ class App extends React.Component {
     this.setState({
       todoList: [
         ...this.state.todoList,
-        {todoItem: this.state.todoItem}
+        {todoItem: this.state.todoItem,
+         id: Date.now(),
+        completed: false}
       ],
       id: Date.now(),
       completed: false,
