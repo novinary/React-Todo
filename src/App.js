@@ -35,12 +35,20 @@ class App extends React.Component {
     };
   }
 
+  handleClear(){
+    console.log('All Cleared');
+  }
+
   handleChanges = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
 
   newTodo = e => {
     e.preventDefault();
+    if (this.state.todoItem === '') {
+			alert('Please enter a Todo');
+		} else {
+
     this.setState({
       todoList: [
         ...this.state.todoList,
@@ -52,6 +60,7 @@ class App extends React.Component {
       completed: false,
       todoItem: ''
     })
+  }
   };
 
   render() {
@@ -60,6 +69,7 @@ class App extends React.Component {
         <h2>This is my Todo App!</h2>
         <TodoForm
                 handleChanges={this.handleChanges}
+                handleClear={this.handleClear}
                 newTodo={this.newTodo}
                 todoItem={this.state.todoItem}
         />
