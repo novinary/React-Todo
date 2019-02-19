@@ -36,7 +36,7 @@ class App extends React.Component {
   }
 
   handleChanges = e => {
-    this.setState({ [e.taret.name]: e.target.value });
+    this.setState({ [e.target.name]: e.target.value });
   };
 
   newTodo = e => {
