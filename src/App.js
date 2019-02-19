@@ -39,6 +39,18 @@ class App extends React.Component {
     this.setState({ [e.taret.name]: e.target.value });
   };
 
+  newTodo = e => {
+    e.preventDefault();
+    this.setState({
+      todoList: [
+        ...this.state.todoList,
+        {todoItem: this.state.todoItem}
+      ],
+      id: Date.now(),
+      completed: false,
+      todoItem: ''
+    })
+  };
 
   render() {
     return (
